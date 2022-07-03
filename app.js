@@ -3,7 +3,7 @@ let playerSelection = prompt("Chose your weapon!").toLowerCase();
 let computerSelection = computerPlay();
 let scorePlayer = parseInt(0);
 let scoreComputer = parseInt(0);
-let round = Number(scorePlayer) + Number(scoreComputer);
+
 
 function computerPlay() {
     computerChoise = choises[Math.floor(Math.random() * 3)];
@@ -32,10 +32,10 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
-        console.log(playRound(playerSelection, computerSelection))
-        console.log("Your score = " + scorePlayer);
-        console.log("Computer score = " + scoreComputer);   
-        console.log("--- Round " + round + " ---");  
-       }
-     }
+   console.log(playRound(playerSelection, computerSelection));   
+    }
+
+ for (let i = 0; i < 5; i++) {
+    console.log(playRound(playerSelection, computerSelection));
+    console.log("*Your score=" + scorePlayer + " *Computer score=" + scoreComputer);  
+    }     
